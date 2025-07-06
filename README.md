@@ -15,7 +15,9 @@ El objetivo principal es fortalecer las habilidades de codificación mediante la
 ## 🗂 Estructura del Proyecto
 
 ├── Entrega_Data_Project.py # Scripts de Python con la resolución de cada kata 
+
 ├── Entrega_Data_project_Python.ipynb #Scripts en visual Code con la resolución de cada kata
+
 ├── README.md # Este documento explicativo del proyecto
 
 --
