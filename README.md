@@ -1,35 +1,52 @@
-# Data Project: Python
+# 🧠 Proyecto de Lógica en Python: Katas de Programación
 
-## Pasos a seguir:
+Desarrollo de múltiples desafíos de lógica programados en Python, diseñados para aplicar y reforzar los conocimientos fundamentales del lenguaje.
 
--Creamos archivo README.md para recoger los pasos seguidos en el proyecto.
+---
 
--Cremos un archivo Jupyter Notebook para trabajar los enunciados. Dicho archivo será convertido a .py para ser entregado.
+## 📖 Descripción del Proyecto
 
--Instalamos la libreria **nbformat** para crear, leer y modificar archivos de notebooks de Jupyter (.ipynb) desde código Python.
- 
--Creamos un archivo de texto con los enunciados, el cual cada línea será un enunciado y junto con un script convertiremos este archivo .txt en un .ipynb con todos los enunciados convertidos en *markdowns*. (El Script se añade como primer markdown en el archivo del proyecto)
+Este proyecto consiste en resolver una serie de **Katas** —ejercicios prácticos enfocados en lógica de programación— utilizando el lenguaje Python. Cada Kata presenta un problema o reto que permite poner en práctica conceptos clave aprendidos durante el módulo, como estructuras de datos, programación orientada a objetos, uso de funciones, condicionales y bucles.
 
--Creamos un pequeño script para convertir los markdown en prints para que puedan verse en el cmd al ejecutar el futuro archivo .py
+El objetivo principal es fortalecer las habilidades de codificación mediante la repetición, perfeccionamiento técnico y uso eficiente del lenguaje, siguiendo buenas prácticas en el desarrollo.
 
--Tenemos ya nuestro archivo para comenzar a trabajar con los enunciados.
+---
 
+## 🗂 Estructura del Proyecto
 
--2: En el primer parametro de *map*, la funcion, cuando la definimos no es necesario llamar a la lista de numeros, ya que *map* ya lo hará e iterará. 
+├── Entrega_Data_Project.py # Scripts de Python con la resolución de cada kata 
+├── Entrega_Data_project_Python.ipynb #Scripts en visual Code con la resolución de cada kata
+├── README.md # Este documento explicativo del proyecto
 
-Utilizamos la funcion split para separar la cadena entrada, en este caso numeros separados por ','.
+--
 
--3: La funcion split crea una lista directamente, no hace falta usar [].
+## 🛠 Instalación y Requisitos
 
--5: A la hora de llamar a una funcion de dos parametros, si uno de ellos esta definido por defecto no hará falta escribirlo en la llamada
+Este proyecto requiere **Python 3.8 o superior**. Se recomienda trabajar dentro de un entorno virtual.
 
--7: Necesitamos a funcion sum para poder separar la lista
+Requiere las siguientes bibliotecas:
+- pandas
+- numpy
+- matplotlib
+- seaborn
 
--8: recordar que dentro de un if no tenemos que poner True o False, una mala interpretación después al ejectuar el código.
+--
 
--10: Tener en cuenta convertir la lista en int/float para poder realizar operaciones.
+## 📊 Resultados y Conclusiones
 
--12: Recordar que la f"" sirve para poder insertar directamente variables en el return
+Se han resuelto todas las katas propuestas en el proyecto, utilizando diferentes enfoques donde era posible.
 
+Las soluciones presentan un razonamiento lógico consistente, una estructura clara y un uso apropiado de las funcionalidades de Python.
+
+A través de estos ejercicios se ha fortalecido el pensamiento algorítmico, la claridad en la codificación y el uso estratégico del lenguaje.
+
+Se ha reforzado la base para abordar problemas más complejos mediante técnicas de programación limpias y eficientes.
+
+---
+
+## ✒️ Autor
+
+- Adrian Ochoa
+- [@LAdrianOB](https://github.com/LAdrianOB)
 
 
