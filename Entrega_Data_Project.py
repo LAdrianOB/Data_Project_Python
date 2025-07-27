@@ -153,24 +153,20 @@ print(factorial(5))  # Salida: 120
 
 
 # %% [markdown]
-# ### Enunciado 7
+# ### Enunciado 7 (CORREGIDO)
 # 7. Genera una función que convierta una lista de tuplas a una lista de strings. Usa la función map()
 
 # %%
-lista_tuplas = [("word1","word2","Word7"),("word3","word4"),("word5","word6"),("Word8", )]
+lista_tuplas = [("word1", "word2", "Word7"),("word3", "word4"),("word5",),("Word8",)]
 
+# Función que une los elementos de la tupla en un solo string
 def conversion(tupla):
-   
-    lista_string = list(tupla) #Transformamos las duplas en lista individual
-    
-    
-    return lista_string
+    return " ".join(tupla)
 
-    
+# Aplicamos map para convertir cada tupla en un string
+lista_strings = list(map(conversion, lista_tuplas))
 
-resultado = sum(list(map(conversion,lista_tuplas)), []) #Como tendremos listas concatenadas, las tenemos que separar para tener solo una con los elementos pertinentes
-
-print(resultado)
+print(lista_strings)
 
 
 # %% [markdown]
@@ -278,7 +274,7 @@ except not_in_range as error:
 
 
 # %% [markdown]
-# ### Enunciado 12
+# ### Enunciado 12 (CORREGIDO)
 # 12. Genera una función que al recibir una frase devuelva una lista con la longitud de cada palabra. Usa la función map()
 
 # %%
@@ -286,12 +282,13 @@ frase = input("Escribe una frase: ")
 frase_dividida  = frase.split(" ") #Separamos la frase en palabras, utilizando los espacios de separador
 print(frase)
 
-def juntar_resultados(elemento):                #Creamos funcion para imprimir cada palabra y su longitud
-    return f"{elemento} = {len(elemento)}"
-    
-    
+# Función que devuelve la longitud de cada palabra
+def longitudes(palabra):
+    return len(palabra)
 
-resultado = list(map(juntar_resultados, frase_dividida))
+# Aplicamos map para obtener lista de enteros
+resultado = list(map(longitudes, frase_dividida))
+
 print(resultado)
 
 # %% [markdown]
@@ -318,23 +315,15 @@ print(lista_final)
 
 
 # %% [markdown]
-# ### Enunciado 14
+# ### Enunciado 14 (CORREGIDO)
 # 14. Crea una función que retorne las palabras de una lista de palabras que comience con una letra en especifico. Usa la función filter()
 
 # %%
-lista = ["arroz","pollo","manzana","zanahoria","pera"]
+lista = ["zorro","pollo","manzana","zanahoria","pera"]
 
-def comienzo (list):
-    """
-    Creamos la función, creamos una lista vacía que será la futura lista de palabras elegidas.
-    Mediante un for seleccionamos todos los parametros que cumplan con el objetivo y añadimos a la lista creada
-    Devolvemos la lista y ya podemos crear el filtro para la lista de entrada
-    """
-    listab = []
-    for elemento in list:
-        if elemento[0] == "z" : 
-            listab.append(elemento)
-    return listab
+def comienzo (palabra):
+
+    return palabra.startswith("z")
 
 resultado = list(filter(comienzo,lista)) 
 
@@ -525,10 +514,12 @@ resto = lambda x, y: x % y
 print(resto(5,3))
 
 # %% [markdown]
-# ### Enunciado 27
+# ### Enunciado 27 (CORREGIDO)
 # 27. Crea una función que calcule el promedio de una lista de números.
 
 # %%
+from functools import reduce
+
 lista = [1, 2, 3, 4, 5]
 
 
@@ -538,22 +529,22 @@ promedio = (reduce(lambda x, y: x + y, lista)) / len(lista)
 print(f"El promedio es: {promedio}")
 
 # %% [markdown]
-# ### Enunciado 28
+# ### Enunciado 28 (CORREGIDO)
 # 28. Crea una función que busque y devuelva el primer elemento duplicado en una lista dada.
 
 # %%
-lista = ["hola",2,3,4,"hola"]
+lista = [1,2,3,4,"hola",3]
 
 def duplicado(listado):
 
     for elemento in listado:
-        if listado.count(elemento) == 2:
+        if listado.count(elemento) > 1:
             return elemento
-        else:
-            return "No hay duplicados"
+
+    return None
 
 resultado = duplicado(lista)   
-print(resultado)
+print(resultado if resultado is not None else "No hay duplicados")
 
 # %% [markdown]
 # ### Enunciado 29
